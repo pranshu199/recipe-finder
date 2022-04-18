@@ -5,6 +5,8 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
+import Hamburger from "./assets/hamburger.svg";
+import SearchIconn from "./assets/search-icon.svg";
 
 const APP_ID = "a52b4d43";
 const APP_KEY = "e0e5c667605f5e91d8275c973531b80a";
@@ -175,11 +177,11 @@ const AppComponent = () => {
     <Container>
       <Header>
         <AppName>
-          <RecipeImage src="/react-recipe-finder/hamburger.svg" />
+          <RecipeImage src={Hamburger} />
           Recipe Finder
         </AppName>
         <SearchBox>
-          <SearchIcon src="/react-recipe-finder/search-icon.svg" />
+          <SearchIcon src={SearchIconn} />
           <SearchInput
             placeholder="Search Recipe"
             value={searchQuery}
@@ -193,7 +195,7 @@ const AppComponent = () => {
             <RecipeComponent key={index} recipe={recipe.recipe} />
           ))
         ) : (<>
-           <Placeholder src="/react-recipe-finder/hamburger.svg" /> </>
+           <Placeholder src={Hamburger} /> </>
         )}
       </RecipeListContainer>
     </Container>
